@@ -6,6 +6,8 @@ let circles = []
 let T0, T1, T2, T3, T4, T5, T6, T7, T8, T9;
 // -> Creating a variable for current image
 let currentImage;
+// -> Click me button 
+let clickMe;
 
 
 // -> Preloading images 
@@ -40,6 +42,20 @@ function setup() {
   imgs.push(T7);
   imgs.push(T8);
   imgs.push(T9);
+
+  // Click me button 
+  clickMe = createButton('Click Me');
+  clickMe.position(width/2, height/2);
+  clickMe.size (165, 18);
+  clickMe.style('background-color','#DAFFA8');
+  clickMe.style('font-weight', 'bold')
+  clickMe.style('color', '#627845')
+  clickMe.style('border', '2px solid #627845')  
+  clickMe.size(100, 80)
+  clickMe.mousePressed(() => {
+    clickMe.remove();
+  });
+  
 }
 
 function draw() {
